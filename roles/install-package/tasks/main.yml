@@ -1,0 +1,21 @@
+---
+# tasks file for roles/install-package
+- name: Mettre à jour le cache des paquets
+  ansible.builtin.apt:
+    update_cache: true
+  become: true
+
+- name: Installer les paquets nécessaires
+  ansible.builtin.apt:
+    name:
+      - git
+      - vim
+      - openssh-server
+      - curl
+      - net-tools
+      - dnsutils
+      - sudo
+      - unzip
+      - nfs-client 
+    state: present
+  become: true 
