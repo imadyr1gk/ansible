@@ -1,0 +1,9 @@
+- name: Déploiement d'une VM Debian sur vCenter
+  hosts: esxi
+  gather_facts: false
+  vars_files:
+    - vault_esxi.yml
+    - ~/variables/vmware.yml
+
+  roles:
+    - create_vm_esxi
