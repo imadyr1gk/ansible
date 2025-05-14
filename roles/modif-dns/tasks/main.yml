@@ -1,0 +1,11 @@
+---
+# tasks file for roles/modif-dns
+- name: Configuration DNS
+  ansible.builtin.copy:
+    dest: /etc/resolv.conf
+    content: |
+      # Configuration dns skyfik.lan unix
+      domain skyfik.lan
+      search skyfik.lan
+      nameserver 192.168.1.2
+  become: true
