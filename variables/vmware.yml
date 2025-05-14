@@ -1,0 +1,12 @@
+vm_name: debian11-test
+vm_template: debian-template
+vm_folder: "/VMs/Debians"
+vm_datacenter: "Datacenter"
+vm_cluster: "Cluster"
+vm_datastore: "datastore1"
+vm_network: "VM Network"
+vm_guest_id: "debian11_64Guest"
+vm_num_cpus: 2
+vm_memory_mb: 2048
+vm_disk_size_gb: 10
+vm_power_on: true
