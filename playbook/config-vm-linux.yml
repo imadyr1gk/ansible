@@ -1,0 +1,7 @@
+---
+- hosts: all
+  vars_files:
+    - ../vault1.yml
+  roles:    
+    - name: modif-dns 
+    - name: install-package
