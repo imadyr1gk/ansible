@@ -18,4 +18,23 @@
       - unzip
       - nfs-client 
     state: present
-  become: true 
+  become: true
+
+#---
+
+- name: Vérifier si vim est installé
+  package_facts:
+    manager: "auto"
+  
+#- name: Notifier le handler si vim est installé
+#  ansible.builtin.debug:
+#    msg: "Vim est installé, on applique la config"
+#  when: "'vim' in ansible_facts.packages"
+#  notify: Editer /etc/vim/vimrc
+
+- name: Forcer le déclenchement du handler si vim est installé
+  ansible.builtin.set_fact:
+    vim_trigger: true
+  changed_when: true
+  when: "'vim' in ansible_facts.packages"
+  notify: Editer /etc/vim/vimrc
