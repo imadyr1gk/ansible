@@ -1,0 +1,9 @@
+---
+# handlers file for roles/install-package
+- name: Editer /etc/vim/vimrc
+  ansible.builtin.blockinfile:
+    path: /etc/vim/vimrc
+    block: |
+      set nu
+      colorscheme torte
+  become: true
