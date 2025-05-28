@@ -3,6 +3,7 @@
 - name: Editer /etc/vim/vimrc
   ansible.builtin.blockinfile:
     path: /etc/vim/vimrc
+    marker: "' {mark} ANSIBLE MANAGED BLOCK"
     block: |
       set nu
       colorscheme torte
