@@ -1,5 +1,5 @@
 ---
-# tasks file for roles/modif-dns
+# tasks file for roles/red-hats-snmp-conf
 - name: install snmp service
   ansible.builtin.dnf:
     name: install snmp rhel
