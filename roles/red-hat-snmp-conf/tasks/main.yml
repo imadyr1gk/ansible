@@ -1,0 +1,21 @@
+---
+# tasks file for roles/modif-dns
+- name: install snmp service
+  ansible.builtin.dnf:
+    name: install snmp rhel
+      - net-snmp
+      - snmp-utils
+    state: present
+  become: true
+
+- name: Config snmp
+  ansible.builtin.copy:
+    src: /etc/snmp/snmpd.conf
+    dest: /etc/snmp/snmpd.conf
+  become: true
+
+- name: restart snmp service
+  ansible.builtin.service:
+    name: snmpd
+    state: restarted
+  become: true
