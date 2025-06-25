@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: kvm_node
   vars_files:
     - ../vault1.yml
   roles:    
