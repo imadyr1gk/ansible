@@ -1,0 +1,7 @@
+---
+- hosts: all
+  gather_facts: yes
+  vars_files:
+    - ../vault1.yml
+  roles:
+    - name: snmp-conf
