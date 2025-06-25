@@ -1,0 +1,13 @@
+ ---
+# tasks file for roles/snmp-conf
+- name: Config snmp
+  ansible.builtin.copy:
+    src: /etc/snmp/snmpd.conf
+    dest: /etc/snmp/snmpd.conf
+  become: true
+
+- name: restart snmp service
+  ansible.builtin.service:
+    name: snmpd
+    state: restarted
+  become: true
