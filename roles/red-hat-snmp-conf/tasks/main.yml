@@ -2,9 +2,9 @@
 # tasks file for roles/red-hats-snmp-conf
 - name: install snmp service
   ansible.builtin.dnf:
-    name: install snmp rhel
+    name: 
       - net-snmp
-      - snmp-utils
+      - net-snmp-utils
     state: present
   become: true
 
