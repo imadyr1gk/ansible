@@ -3,5 +3,5 @@
   vars_files:
     - ../vault1.yml
   roles:    
-    - name: modif-dns 
-    - name: red-hat-install-package
+    - name: ../roles/modif-dns 
+    - name: ../roles/red-hat-install-package
