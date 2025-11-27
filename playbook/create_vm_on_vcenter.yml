@@ -6,4 +6,4 @@
     - ~/variables/vmware.yml
 
   roles:
-    - create_vm_vcenter
+    - ../roles/create_vm_vcenter
