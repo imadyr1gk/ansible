@@ -4,4 +4,4 @@
   vars_files:
     - ../vault1.yml
   roles:
-    - name: snmp-conf
+    - name: ../roles/snmp-conf
